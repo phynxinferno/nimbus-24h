@@ -1,12 +1,12 @@
 # Nimbus
 
-
-
-[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.danrabbit.nimbus)
+> [!NOTE]  
+> This is a temporary fork to implement 24h time jankily. No PR because my code sucks :3
 
 See the current temperature and weather conditions for your location with this minimal color-changing applet.
 
-![Nimbus Screenshot](https://raw.github.com/danrabbit/nimbus/main/data/screenshot.png)
+![Nimbus Screenshot](https://github.com/phynxinferno/nimbus-24h/blob/main/data/screenshot.png?raw=true)
+
 
 ## Building, Testing, and Installation
 
