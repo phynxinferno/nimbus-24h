@@ -24,7 +24,7 @@ public class HourlyInfoChild : Gtk.FlowBoxChild {
 
         var datetime = new DateTime.from_unix_utc (unix_date).to_timezone (location.get_timezone ());
 
-        var time_label = new Gtk.Label (datetime.format (_("%l %p")).replace (" ", ""));
+        var time_label = new Gtk.Label (datetime.format (_("%k".concat((MainWindow.time_format) ? " %p" : "h"))).replace (" ", ""));
         time_label.add_css_class (Granite.STYLE_CLASS_SMALL_LABEL);
 
         var image = new Gtk.Image.from_icon_name (weather_info.get_symbolic_icon_name ()) {

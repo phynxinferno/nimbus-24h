@@ -10,6 +10,7 @@ public class MainWindow : Gtk.ApplicationWindow {
     private Granite.Placeholder placeholder;
     private GWeather.Location? location = null;
     private GWeather.Info weather_info;
+    public static bool time_format = false;
 
     construct {
         weather_info = new GWeather.Info (location) {
@@ -184,6 +185,10 @@ public class MainWindow : Gtk.ApplicationWindow {
             while (hourly_box.get_first_child () != null) {
                 hourly_box.remove (hourly_box.get_first_child ());
             }
+
+            // set time format
+            var now = new GLib.DateTime.now_local();
+            time_format = now.format("%X").contains(now.format("%p"));
 
             unowned var forecast_list = weather_info.get_forecast_list ();
             foreach (unowned var info in forecast_list) {
